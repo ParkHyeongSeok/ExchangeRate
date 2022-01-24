@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DED6279EB5A500109CB4 /* AppDelegate.swift */; };
-		03E5DED9279EB5A500109CB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DED8279EB5A500109CB4 /* SceneDelegate.swift */; };
-		03E5DEDB279EB5A500109CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEDA279EB5A500109CB4 /* ViewController.swift */; };
-		03E5DEDE279EB5A500109CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DEDC279EB5A500109CB4 /* Main.storyboard */; };
 		03E5DEE0279EB5A800109CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DEDF279EB5A800109CB4 /* Assets.xcassets */; };
 		03E5DEE3279EB5A800109CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */; };
 		03E5DEEE279EB5A900109CB4 /* ExchangeRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEED279EB5A900109CB4 /* ExchangeRateTests.swift */; };
 		03E5DEF8279EB5A900109CB4 /* ExchangeRateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEF7279EB5A900109CB4 /* ExchangeRateUITests.swift */; };
 		03E5DEFA279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEF9279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift */; };
+		03E5DF0B279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0A279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift */; };
+		03E5DF0E279EBB7400109CB4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0D279EBB7400109CB4 /* BaseViewController.swift */; };
+		03E5DF10279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0F279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift */; };
+		03E5DF19279ED0CA00109CB4 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF18279ED0CA00109CB4 /* UITextField+Extension.swift */; };
 		8322B15DEF01AE77582A3C53 /* Pods_ExchangeRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D1D1E59F23B6F1B5E33FF /* Pods_ExchangeRateTests.framework */; };
 		B6F8FC3541E702C0E123019E /* Pods_ExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */; };
 		D36C086C2686CEE95B5BC4AE /* Pods_ExchangeRate_ExchangeRateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B0A561299B7F7EADA6FA7 /* Pods_ExchangeRate_ExchangeRateUITests.framework */; };
@@ -41,9 +42,6 @@
 /* Begin PBXFileReference section */
 		03E5DED3279EB5A500109CB4 /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E5DED6279EB5A500109CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03E5DED8279EB5A500109CB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03E5DEDA279EB5A500109CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03E5DEDD279EB5A500109CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03E5DEDF279EB5A800109CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E5DEE2279EB5A800109CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E5DEE4279EB5A800109CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +50,10 @@
 		03E5DEF3279EB5A900109CB4 /* ExchangeRateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E5DEF7279EB5A900109CB4 /* ExchangeRateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateUITests.swift; sourceTree = "<group>"; };
 		03E5DEF9279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03E5DF0A279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorViewController.swift; sourceTree = "<group>"; };
+		03E5DF0D279EBB7400109CB4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		03E5DF0F279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorReactor.swift; sourceTree = "<group>"; };
+		03E5DF18279ED0CA00109CB4 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194701768A3701F64C87612F /* Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DAE0CBDA1B7098A623CE7A3 /* Pods-ExchangeRateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateTests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,10 +118,10 @@
 		03E5DED5279EB5A500109CB4 /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
-				03E5DED6279EB5A500109CB4 /* AppDelegate.swift */,
-				03E5DED8279EB5A500109CB4 /* SceneDelegate.swift */,
-				03E5DEDA279EB5A500109CB4 /* ViewController.swift */,
-				03E5DEDC279EB5A500109CB4 /* Main.storyboard */,
+				03E5DF13279EBF2300109CB4 /* Application API */,
+				03E5DF15279EBF9C00109CB4 /* Network API */,
+				03E5DF16279EBFA900109CB4 /* Application */,
+				03E5DF11279EBF0900109CB4 /* Domain */,
 				03E5DEDF279EB5A800109CB4 /* Assets.xcassets */,
 				03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */,
 				03E5DEE4279EB5A800109CB4 /* Info.plist */,
@@ -144,6 +146,63 @@
 			path = ExchangeRateUITests;
 			sourceTree = "<group>";
 		};
+		03E5DF11279EBF0900109CB4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF12279EBF1100109CB4 /* Calculator */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		03E5DF12279EBF1100109CB4 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF0F279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift */,
+				03E5DF0A279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		03E5DF13279EBF2300109CB4 /* Application API */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF17279ED0B700109CB4 /* Extension */,
+				03E5DF14279EBF9100109CB4 /* Base */,
+			);
+			path = "Application API";
+			sourceTree = "<group>";
+		};
+		03E5DF14279EBF9100109CB4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF0D279EBB7400109CB4 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		03E5DF15279EBF9C00109CB4 /* Network API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network API";
+			sourceTree = "<group>";
+		};
+		03E5DF16279EBFA900109CB4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DED6279EB5A500109CB4 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		03E5DF17279ED0B700109CB4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF18279ED0CA00109CB4 /* UITextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		14B3487C0A29DE949D70D524 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +213,6 @@
 				2DAE0CBDA1B7098A623CE7A3 /* Pods-ExchangeRateTests.debug.xcconfig */,
 				9CB32588E6AF5FF8015A9B75 /* Pods-ExchangeRateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -280,7 +338,6 @@
 			files = (
 				03E5DEE3279EB5A800109CB4 /* LaunchScreen.storyboard in Resources */,
 				03E5DEE0279EB5A800109CB4 /* Assets.xcassets in Resources */,
-				03E5DEDE279EB5A500109CB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +482,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E5DEDB279EB5A500109CB4 /* ViewController.swift in Sources */,
+				03E5DF19279ED0CA00109CB4 /* UITextField+Extension.swift in Sources */,
 				03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */,
-				03E5DED9279EB5A500109CB4 /* SceneDelegate.swift in Sources */,
+				03E5DF0B279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift in Sources */,
+				03E5DF0E279EBB7400109CB4 /* BaseViewController.swift in Sources */,
+				03E5DF10279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,14 +523,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03E5DEDC279EB5A500109CB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03E5DEDD279EB5A500109CB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -612,7 +663,6 @@
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -641,7 +691,6 @@
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
