@@ -8,5 +8,8 @@
 import Foundation
 
 class CurrencyAPI: NetworkAPIType {
-    
+    let session: URLSession
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
 }

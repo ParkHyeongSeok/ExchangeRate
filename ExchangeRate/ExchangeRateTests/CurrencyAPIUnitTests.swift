@@ -1,14 +1,13 @@
 //
-//  ExchangeRateTests.swift
+//  CurrencyAPIUnitTests.swift
 //  ExchangeRateTests
 //
-//  Created by 박형석 on 2022/01/24.
+//  Created by 박형석 on 2022/01/25.
 //
 
 import XCTest
-@testable import ExchangeRate
 
-class ExchangeRateTests: XCTestCase {
+class CurrencyAPIUnitTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

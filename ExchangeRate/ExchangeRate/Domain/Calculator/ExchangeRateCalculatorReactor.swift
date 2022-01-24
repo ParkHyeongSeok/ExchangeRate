@@ -50,11 +50,11 @@ class ExchangeRateCalculatorReactor: Reactor {
         case .changeReceiptCountry(let receiptCountry):
             return Observable.concat(
                 .just(.setLoading(true)),
-                .just(.setReceiptCountry(receiptCountry)),
                 self.exchangeRateService
                     .fetchExchangeRate(to: self.currentState.receiptCountry)
                     .map { .setExchangeRate($0) },
                 .just(.setRecentSearchTime(Date())),
+                .just(.setReceiptCountry(receiptCountry)),
                 .just(.setLoading(false)))
             
         case .inputRemittance(let remittance):
