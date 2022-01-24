@@ -25,8 +25,10 @@ class ExchangeRateCalculatorReactor: Reactor {
     }
     
     let initialState: State
+    let currencyAPI: NetworkAPIType
     
-    init() {
+    init(currencyAPI: NetworkAPIType) {
+        self.currencyAPI = currencyAPI
         self.initialState = State()
     }
     
