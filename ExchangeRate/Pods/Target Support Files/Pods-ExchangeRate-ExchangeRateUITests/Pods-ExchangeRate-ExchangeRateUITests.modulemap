@@ -1,0 +1,6 @@
+framework module Pods_ExchangeRate_ExchangeRateUITests {
+  umbrella header "Pods-ExchangeRate-ExchangeRateUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
