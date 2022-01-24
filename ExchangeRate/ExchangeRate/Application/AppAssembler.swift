@@ -14,7 +14,7 @@ struct AppAssembler {
 
 extension AppAssembler {
     static func resolve() -> Assembler {
-        let assemblies = [
+        let assemblies: [Assembly] = [
             CalculatorAssembly(),
             ServiceAssembly()
         ]

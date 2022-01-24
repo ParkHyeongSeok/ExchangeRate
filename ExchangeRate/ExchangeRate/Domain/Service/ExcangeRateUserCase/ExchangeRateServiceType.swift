@@ -10,4 +10,5 @@ import RxSwift
 
 protocol ExchangeRateServiceType {
     func fetchExchangeRate(to: ReceiptCountry) -> Observable<Double>
+    func calculatorAmount(remittance: Double, exchangeRate: Double) -> Observable<Double>
 }

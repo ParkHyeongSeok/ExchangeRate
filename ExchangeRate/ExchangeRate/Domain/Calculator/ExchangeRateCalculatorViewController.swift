@@ -122,7 +122,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
     private var loadingIndicator = UIActivityIndicatorView().then {
         $0.hidesWhenStopped = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingPickerView()
@@ -130,25 +130,49 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
     
     func bind(reactor: ExchangeRateCalculatorReactor) {
         
-        reactor.state.map { $0.isLoading }
-        .bind(to: loadingIndicator.rx.isAnimating)
-        .disposed(by: disposeBag)
+        reactor.state
+            .map { $0.isLoading }
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: loadingIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
         
-        reactor.state.map { $0.exchangeRate }
-        .bind(to: currentExchangeRate.rx.text)
-        .disposed(by: disposeBag)
+        Observable.zip(
+            reactor.state
+                .map { $0.exchangeRate }
+                .map { $0.formattingToString },
+            reactor.state
+                .map { $0.receiptCountry }
+                .map { $0.currencyUnit })
+            .map { "\($0) \($1) / USD" }
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: currentExchangeRate.rx.text)
+            .disposed(by: disposeBag)
         
-        reactor.state.map { $0.calculations }
-        .bind(to: calculationsLabel.rx.text)
-        .disposed(by: disposeBag)
+        Observable.combineLatest(
+            reactor.state
+                .map { $0.calculations },
+            reactor.state
+                .map { $0.receiptCountry })
+            .observe(on: MainScheduler.asyncInstance)
+            .withUnretained(self)
+            .bind(onNext: { owner, result in
+                owner.showResult(result.0, country: result.1)
+            })
+            .disposed(by: disposeBag)
         
-        reactor.state.map { $0.recentSearchTime }
-        .bind(to: recentSearchTime.rx.text)
-        .disposed(by: disposeBag)
+        reactor.state
+            .map { $0.recentSearchTime }
+            .map { $0.formattingToString }
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: recentSearchTime.rx.text)
+            .disposed(by: disposeBag)
         
-        reactor.state.map { $0.recentSearchTime }
-        .bind(to: receiptCountrySelectButton.rx.title(for: .normal))
-        .disposed(by: disposeBag)
+        reactor.state
+            .map { $0.receiptCountry }
+            .map { $0.rawValue }
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: receiptCountrySelectButton.rx.title(for: .normal))
+            .disposed(by: disposeBag)
         
         receiptCountrySelectButton.rx.tap
             .withUnretained(self)
@@ -158,7 +182,6 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             .disposed(by: disposeBag)
         
         remittanceTextField.rx.text.orEmpty
-            .throttle(.milliseconds(500), scheduler: MainScheduler.asyncInstance)
             .distinctUntilChanged()
             .compactMap { Double($0) }
             .map { .inputRemittance($0) }
@@ -171,7 +194,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
     }
-   
+    
     override func makeConstraints() {
         super.makeConstraints()
         
@@ -196,11 +219,21 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
                 $0.alignment = .trailing
             }
         
+        let exchangeRateHorizontalStackView = UIStackView(
+            arrangedSubviews: [
+                self.currentExchangeRate,
+                self.loadingIndicator
+            ]).then {
+                $0.spacing = 5
+                $0.distribution = .fill
+                $0.axis = .horizontal
+                $0.alignment = .leading
+            }
+        
         let remittanceHorizontalStackView = UIStackView(
             arrangedSubviews: [
                 self.remittanceTextField,
-                self.currencyLabel,
-                self.loadingIndicator
+                self.currencyLabel
             ]).then {
                 $0.spacing = 5
                 $0.distribution = .fill
@@ -212,7 +245,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             arrangedSubviews: [
                 self.selectedRemitCountry,
                 self.receiptCountrySelectButton,
-                self.currentExchangeRate,
+                exchangeRateHorizontalStackView,
                 self.recentSearchTime,
                 remittanceHorizontalStackView
             ])
@@ -258,5 +291,15 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             }
             .disposed(by: disposeBag)
     }
-
+    
+    private func showResult(_ calculations: Double, country: ReceiptCountry) {
+        if calculations < 0 || calculations > 10000 {
+            self.calculationsLabel.textColor = .red
+            self.calculationsLabel.text = "송금액이 바르지 않습니다"
+        } else {
+            self.calculationsLabel.textColor = .black
+            self.calculationsLabel.text = "수취금액은 \(calculations.formattingToString) \(country.currencyUnit) 입니다."
+        }
+    }
+    
 }
