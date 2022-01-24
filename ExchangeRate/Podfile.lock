@@ -13,6 +13,7 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SnapKit (5.0.1)
+  - Swinject (2.8.1)
   - Then (2.7.0)
   - WeakMapTable (1.2.0)
 
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - RxKeyboard
   - RxSwift
   - SnapKit
+  - Swinject
   - Then
 
 SPEC REPOS:
@@ -34,6 +36,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - Swinject
     - Then
     - WeakMapTable
 
@@ -45,9 +48,10 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: d6f2fe3748b37436f4f7c7c570331dfec35532f0
+PODFILE CHECKSUM: 9c55e3ce47807eafa0fac03853597935ddecb1c2
 
 COCOAPODS: 1.11.2
