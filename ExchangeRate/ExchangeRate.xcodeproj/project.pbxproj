@@ -21,6 +21,10 @@
 		03E5DF20279EDD5A00109CB4 /* CurrencyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF1F279EDD5A00109CB4 /* CurrencyAPI.swift */; };
 		03E5DF22279EDD6500109CB4 /* NetworkAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF21279EDD6500109CB4 /* NetworkAPIType.swift */; };
 		03E5DF25279EDF0300109CB4 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF24279EDF0300109CB4 /* AppAssembler.swift */; };
+		03E5DF28279EE44C00109CB4 /* ReceiptCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF27279EE44C00109CB4 /* ReceiptCountry.swift */; };
+		03E5DF2B279EFBE600109CB4 /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF2A279EFBE600109CB4 /* ExchangeRateService.swift */; };
+		03E5DF2D279EFC0100109CB4 /* ExchangeRateServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF2C279EFC0100109CB4 /* ExchangeRateServiceType.swift */; };
+		03E5DF30279EFCD300109CB4 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */; };
 		8322B15DEF01AE77582A3C53 /* Pods_ExchangeRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D1D1E59F23B6F1B5E33FF /* Pods_ExchangeRateTests.framework */; };
 		B6F8FC3541E702C0E123019E /* Pods_ExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */; };
 		D36C086C2686CEE95B5BC4AE /* Pods_ExchangeRate_ExchangeRateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B0A561299B7F7EADA6FA7 /* Pods_ExchangeRate_ExchangeRateUITests.framework */; };
@@ -62,6 +66,10 @@
 		03E5DF1F279EDD5A00109CB4 /* CurrencyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPI.swift; sourceTree = "<group>"; };
 		03E5DF21279EDD6500109CB4 /* NetworkAPIType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIType.swift; sourceTree = "<group>"; };
 		03E5DF24279EDF0300109CB4 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		03E5DF27279EE44C00109CB4 /* ReceiptCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCountry.swift; sourceTree = "<group>"; };
+		03E5DF2A279EFBE600109CB4 /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
+		03E5DF2C279EFC0100109CB4 /* ExchangeRateServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceType.swift; sourceTree = "<group>"; };
+		03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194701768A3701F64C87612F /* Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DAE0CBDA1B7098A623CE7A3 /* Pods-ExchangeRateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateTests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				03E5DF15279EBF9C00109CB4 /* Network */,
 				03E5DF16279EBFA900109CB4 /* Application */,
 				03E5DF11279EBF0900109CB4 /* Domain */,
+				03E5DF26279EE43500109CB4 /* Model */,
 				03E5DEDF279EB5A800109CB4 /* Assets.xcassets */,
 				03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */,
 				03E5DEE4279EB5A800109CB4 /* Info.plist */,
@@ -157,6 +166,7 @@
 		03E5DF11279EBF0900109CB4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF29279EFA8C00109CB4 /* Service */,
 				03E5DF12279EBF1100109CB4 /* Calculator */,
 			);
 			path = Domain;
@@ -221,6 +231,32 @@
 			children = (
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		03E5DF26279EE43500109CB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF27279EE44C00109CB4 /* ReceiptCountry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03E5DF29279EFA8C00109CB4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */,
+				03E5DF2E279EFCB700109CB4 /* ExcangeRateUserCase */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03E5DF2E279EFCB700109CB4 /* ExcangeRateUserCase */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF2C279EFC0100109CB4 /* ExchangeRateServiceType.swift */,
+				03E5DF2A279EFBE600109CB4 /* ExchangeRateService.swift */,
+			);
+			path = ExcangeRateUserCase;
 			sourceTree = "<group>";
 		};
 		14B3487C0A29DE949D70D524 /* Pods */ = {
@@ -503,9 +539,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E5DF19279ED0CA00109CB4 /* UITextField+Extension.swift in Sources */,
+				03E5DF30279EFCD300109CB4 /* ServiceAssembly.swift in Sources */,
 				03E5DF1C279EDC4C00109CB4 /* CalculatorAssembly.swift in Sources */,
 				03E5DF25279EDF0300109CB4 /* AppAssembler.swift in Sources */,
+				03E5DF2B279EFBE600109CB4 /* ExchangeRateService.swift in Sources */,
+				03E5DF28279EE44C00109CB4 /* ReceiptCountry.swift in Sources */,
 				03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */,
+				03E5DF2D279EFC0100109CB4 /* ExchangeRateServiceType.swift in Sources */,
 				03E5DF0B279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift in Sources */,
 				03E5DF0E279EBB7400109CB4 /* BaseViewController.swift in Sources */,
 				03E5DF22279EDD6500109CB4 /* NetworkAPIType.swift in Sources */,

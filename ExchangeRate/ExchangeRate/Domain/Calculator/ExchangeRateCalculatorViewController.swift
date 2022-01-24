@@ -53,8 +53,12 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         }
     }
     
+    private let dummyTextField = UITextField(frame: .zero).then {
+        $0.addDoneButtonOnKeyboard()
+    }
+    
     private let receiptCountryPickerView = UIPickerView().then {
-        $0.backgroundColor = .clear
+        $0.backgroundColor = .systemBackground
     }
     
     // exchange rate
@@ -114,11 +118,58 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         $0.font = UIFont.systemFont(ofSize: 20)
         $0.textAlignment = .center
     }
-
+    
+    private var loadingIndicator = UIActivityIndicatorView().then {
+        $0.hidesWhenStopped = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.settingPickerView()
+    }
+    
+    func bind(reactor: ExchangeRateCalculatorReactor) {
+        
+        reactor.state.map { $0.isLoading }
+        .bind(to: loadingIndicator.rx.isAnimating)
+        .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.exchangeRate }
+        .bind(to: currentExchangeRate.rx.text)
+        .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.calculations }
+        .bind(to: calculationsLabel.rx.text)
+        .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.recentSearchTime }
+        .bind(to: recentSearchTime.rx.text)
+        .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.recentSearchTime }
+        .bind(to: receiptCountrySelectButton.rx.title(for: .normal))
+        .disposed(by: disposeBag)
+        
+        receiptCountrySelectButton.rx.tap
+            .withUnretained(self)
+            .bind { owner, _ in
+                owner.dummyTextField.becomeFirstResponder()
+            }
+            .disposed(by: disposeBag)
+        
+        remittanceTextField.rx.text.orEmpty
+            .throttle(.milliseconds(500), scheduler: MainScheduler.asyncInstance)
+            .distinctUntilChanged()
+            .compactMap { Double($0) }
+            .map { .inputRemittance($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        receiptCountryPickerView.rx.itemSelected
+            .map { ReceiptCountry.allCases[$0.0] }
+            .map { .changeReceiptCountry($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
    
     override func makeConstraints() {
@@ -148,7 +199,8 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         let remittanceHorizontalStackView = UIStackView(
             arrangedSubviews: [
                 self.remittanceTextField,
-                self.currencyLabel
+                self.currencyLabel,
+                self.loadingIndicator
             ]).then {
                 $0.spacing = 5
                 $0.distribution = .fill
@@ -195,21 +247,14 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             make.top.equalTo(wholeStackView.snp.bottom).offset(90)
         }
         
+        view.addSubview(self.dummyTextField)
+        self.dummyTextField.inputView = self.receiptCountryPickerView
     }
     
-    func bind(reactor: ExchangeRateCalculatorReactor) {
-        receiptCountrySelectButton.rx.tap
-            .withUnretained(self)
-            .bind { owner, _ in
-                print("receiptCountrySelectButton tapped")
-            }
-            .disposed(by: disposeBag)
-        
-        remittanceTextField.rx.text.orEmpty
-            .distinctUntilChanged()
-            .withUnretained(self)
-            .bind { owner, text in
-                print(text)
+    private func settingPickerView() {
+        Observable.of(ReceiptCountry.allCases.map { $0.rawValue })
+            .bind(to: self.receiptCountryPickerView.rx.itemTitles) { row, item in
+                return item
             }
             .disposed(by: disposeBag)
     }

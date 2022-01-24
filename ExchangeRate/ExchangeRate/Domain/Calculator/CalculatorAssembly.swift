@@ -12,12 +12,9 @@ class CalculatorAssembly: Assembly {
     func assemble(container: Container) {
         let resolver = container.synchronize()
         
-        container.register(NetworkAPIType.self, name: nil) { _ in
-            return CurrencyAPI()
-        }.inObjectScope(.graph)
-        
         container.register(ExchangeRateCalculatorReactor.self, name: nil) { _ in
-            return ExchangeRateCalculatorReactor(currencyAPI: resolver.resolve(NetworkAPIType.self)!)
+            let service = resolver.resolve(ExchangeRateServiceType.self)!
+            return ExchangeRateCalculatorReactor(exchangeRateService: service)
         }.inObjectScope(.graph)
         
         container.register(ExchangeRateCalculatorViewController.self, name: nil) { _ in
