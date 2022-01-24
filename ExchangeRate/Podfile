@@ -12,6 +12,7 @@ target 'ExchangeRate' do
  pod 'RxCocoa'
  pod 'RxKeyboard'
  pod 'ReactorKit'
+ pod 'Swinject'
   target 'ExchangeRateTests' do
     inherit! :search_paths
     # Pods for testing
