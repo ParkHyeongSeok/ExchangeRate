@@ -30,7 +30,6 @@
 		03E5DF39279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */; };
 		03E5DF3B279F4A3500109CB4 /* CurrencyAPIUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */; };
 		03E5DF41279F4F1F00109CB4 /* StubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF40279F4F1F00109CB4 /* StubSession.swift */; };
-		03E5DF43279F514600109CB4 /* SessionTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */; };
 		03E5DF46279F741A00109CB4 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF45279F741A00109CB4 /* RequestParams.swift */; };
 		03E5DF48279F748A00109CB4 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF47279F748900109CB4 /* RouterType.swift */; };
 		03E5DF4B279F754600109CB4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF4A279F754600109CB4 /* NetworkError.swift */; };
@@ -89,7 +88,6 @@
 		03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceUnitTests.swift; sourceTree = "<group>"; };
 		03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPIUnitTests.swift; sourceTree = "<group>"; };
 		03E5DF40279F4F1F00109CB4 /* StubSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSession.swift; sourceTree = "<group>"; };
-		03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTypeProtocol.swift; sourceTree = "<group>"; };
 		03E5DF45279F741A00109CB4 /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		03E5DF47279F748900109CB4 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		03E5DF4A279F754600109CB4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 		03E5DF1A279EDB1D00109CB4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -621,7 +618,6 @@
 				03E5DF59279F803200109CB4 /* RemittanceCountry.swift in Sources */,
 				03E5DF2B279EFBE600109CB4 /* ExchangeRateService.swift in Sources */,
 				03E5DF28279EE44C00109CB4 /* ReceiptCountry.swift in Sources */,
-				03E5DF43279F514600109CB4 /* SessionTypeProtocol.swift in Sources */,
 				03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */,
 				03E5DF2D279EFC0100109CB4 /* ExchangeRateServiceType.swift in Sources */,
 				03E5DF52279F782400109CB4 /* SessionManager.swift in Sources */,

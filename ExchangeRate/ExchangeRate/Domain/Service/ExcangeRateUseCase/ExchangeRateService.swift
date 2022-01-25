@@ -16,23 +16,24 @@ class ExchangeRateService: ExchangeRateServiceType {
         self.currencyAPI = currencyAPI
     }
     
-    func fetchExchangeRate(to: ReceiptCountry) -> Observable<Double> {
+    func fetchExchangeRate(of country: ReceiptCountry) -> Observable<ExchangeRate> {
         return Observable.create { observer in
-            //..
-            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-                observer.onNext(100.00)
-                observer.onCompleted()
+            self.currencyAPI.performRequest(with: country) { result in
+                switch result {
+                case .success(let exchangeRate):
+                    observer.onNext(exchangeRate)
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
+                }
             }
             return Disposables.create()
         }
     }
     
-    func calculatorAmount(remittance: Double, exchangeRate: Double) -> Observable<Double> {
-        return Observable.create { observer in
-            //..
-            observer.onNext(100.00)
-            observer.onCompleted()
-            return Disposables.create()
-        }
+    func calculatorAmount(remittance: Double, exchangeRate: ExchangeRate) -> Observable<Double> {
+        print(remittance)
+        print(exchangeRate)
+        return .just(remittance * exchangeRate.value)
     }
 }

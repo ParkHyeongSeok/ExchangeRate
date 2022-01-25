@@ -17,5 +17,4 @@ final class SessionManager {
     private init() {
         session = Session(interceptor: interceptors)
     }
-    
 }

@@ -9,4 +9,6 @@ import Foundation
 
 enum NetworkError: String, Error {
     case urlRequestConvert = "⛔️ urlRequest 변환에 실패했습니다."
+    case response = "⛔️ 데이터를 가져오는데 실패했습니다."
+    case decoding = "⛔️ 디코딩에 실패했습니다."
 }

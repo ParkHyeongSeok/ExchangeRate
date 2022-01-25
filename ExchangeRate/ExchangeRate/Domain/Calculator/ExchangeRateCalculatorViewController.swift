@@ -95,6 +95,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
     }
     
     private let remittanceTextField = UITextField().then {
+        $0.placeholder = "0"
         $0.textAlignment = .right
         $0.font = UIFont.systemFont(ofSize: 17)
         $0.borderStyle = .line
@@ -107,14 +108,14 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
     }
     
     private let currencyLabel = UILabel().then {
-        $0.text = "USD"
+        $0.text = "\(RemittanceCountry.america.currencyUnit)"
         $0.font = UIFont.systemFont(ofSize: 17)
         $0.textAlignment = .center
     }
     
     // calculations
     private let calculationsLabel = UILabel().then {
-        $0.text = "수취금액은 113,004.98 KRW 입니다"
+        $0.text = "송금액을 입력해 주세요"
         $0.font = UIFont.systemFont(ofSize: 20)
         $0.textAlignment = .center
     }
@@ -139,7 +140,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         Observable.zip(
             reactor.state
                 .map { $0.exchangeRate }
-                .map { $0.formattingToString },
+                .map { $0.value.formattingToString },
             reactor.state
                 .map { $0.receiptCountry }
                 .map { $0.currencyUnit })
@@ -183,6 +184,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         
         remittanceTextField.rx.text.orEmpty
             .distinctUntilChanged()
+            .filter(checkRemittance)
             .compactMap { Double($0) }
             .map { .inputRemittance($0) }
             .bind(to: reactor.action)
@@ -190,6 +192,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         
         receiptCountryPickerView.rx.itemSelected
             .map { ReceiptCountry.allCases[$0.0] }
+            .debug()
             .map { .changeReceiptCountry($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
@@ -292,14 +295,45 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             .disposed(by: disposeBag)
     }
     
-    private func showResult(_ calculations: Double, country: ReceiptCountry) {
-        if calculations < 0 || calculations > 10000 {
+    private func checkRemittance(_ remittance: String) -> Bool {
+        
+        guard self.validationNum(text: remittance) else {
             self.calculationsLabel.textColor = .red
             self.calculationsLabel.text = "송금액이 바르지 않습니다"
-        } else {
+            return false
+        }
+        
+        guard let doubleValue = Double(remittance) else {
             self.calculationsLabel.textColor = .black
-            self.calculationsLabel.text = "수취금액은 \(calculations.formattingToString) \(country.currencyUnit) 입니다."
+            self.calculationsLabel.text = "송금액을 입력해 주세요"
+            return false
+        }
+        
+        guard doubleValue > 0 && doubleValue < 10000 else {
+            self.calculationsLabel.textColor = .red
+            self.calculationsLabel.text = "송금액이 바르지 않습니다"
+            return false
+        }
+        
+        self.calculationsLabel.textColor = .black
+        self.calculationsLabel.text = "송금액을 입력해 주세요"
+        return true
+
+    }
+    
+    private func showResult(_ calculations: Double, country: ReceiptCountry) {
+        self.calculationsLabel.textColor = .black
+        self.calculationsLabel.text = "수취금액은 \(calculations.formattingToString) \(country.currencyUnit) 입니다."
+    }
+    
+    func validationNum(text: String) -> Bool {
+        let charSet = CharacterSet(charactersIn: "0123456789").inverted
+        if text.rangeOfCharacter(from: charSet) == nil {
+            return true
+        } else {
+            return false
         }
     }
+    
     
 }

@@ -9,15 +9,15 @@ import Foundation
 @testable import Alamofire
 @testable import ExchangeRate
 
-class StubSession: SessionType {
-    func request(_ convertible: URLConvertible,
-                 method: HTTPMethod,
-                 parameters: Parameters?,
-                 encoding: ParameterEncoding,
-                 headers: HTTPHeaders?,
-                 interceptor: RequestInterceptor?,
-                 requestModifier: RequestModifier?) -> DataRequest {
-        
-        return DataRequest
-    }
+class StubSession {
+//    func request(_ convertible: URLConvertible,
+//                 method: HTTPMethod,
+//                 parameters: Parameters?,
+//                 encoding: ParameterEncoding,
+//                 headers: HTTPHeaders?,
+//                 interceptor: RequestInterceptor?,
+//                 requestModifier: RequestModifier?) -> DataRequest {
+//
+//        return DataRequest
+//    }
 }
