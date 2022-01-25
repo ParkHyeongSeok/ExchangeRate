@@ -175,6 +175,12 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             .bind(to: receiptCountrySelectButton.rx.title(for: .normal))
             .disposed(by: disposeBag)
         
+        reactor.state
+            .map { $0.remittance }
+            .map { $0 != nil ? "\(Int($0!))" : ""}
+            .bind(to: remittanceTextField.rx.text)
+            .disposed(by: disposeBag)
+        
         receiptCountrySelectButton.rx.tap
             .withUnretained(self)
             .bind { owner, _ in
@@ -309,7 +315,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             return false
         }
         
-        guard doubleValue > 0 && doubleValue < 10000 else {
+        guard !(doubleValue < 0) && !(doubleValue > 10000) else {
             self.calculationsLabel.textColor = .red
             self.calculationsLabel.text = "송금액이 바르지 않습니다"
             return false
@@ -326,7 +332,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         self.calculationsLabel.text = "수취금액은 \(calculations.formattingToString) \(country.currencyUnit) 입니다."
     }
     
-    func validationNum(text: String) -> Bool {
+    private func validationNum(text: String) -> Bool {
         let charSet = CharacterSet(charactersIn: "0123456789").inverted
         if text.rangeOfCharacter(from: charSet) == nil {
             return true

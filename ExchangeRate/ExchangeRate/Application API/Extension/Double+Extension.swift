@@ -11,6 +11,9 @@ extension Double {
     var formattingToString: String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
+        numberFormatter.roundingMode = .halfUp
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
         return numberFormatter.string(from: NSNumber(value: self))!
     }
 }

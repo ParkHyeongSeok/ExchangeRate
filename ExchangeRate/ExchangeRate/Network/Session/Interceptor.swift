@@ -23,7 +23,7 @@ final class ERInterceptor: RequestInterceptor {
         } catch {
             print(NetworkError.urlRequestConvert)
         }
-        print(request.url)
+        
         completion(.success(request))
     }
 

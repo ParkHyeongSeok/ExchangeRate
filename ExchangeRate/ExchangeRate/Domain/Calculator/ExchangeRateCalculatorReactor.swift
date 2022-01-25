@@ -21,7 +21,7 @@ class ExchangeRateCalculatorReactor: Reactor {
         case setReceiptCountry(ReceiptCountry)
         case setExchangeRate(ExchangeRate)
         case setRecentSearchTime(Date)
-        case setRemittance(Double)
+        case setRemittance(Double?)
         case setCalculations(Double)
         case setLoading(Bool)
     }
@@ -30,7 +30,7 @@ class ExchangeRateCalculatorReactor: Reactor {
         var receiptCountry: ReceiptCountry = .korea
         var exchangeRate: ExchangeRate = ExchangeRate(0)
         var recentSearchTime: Date = Date()
-        var remittance: Double = 0
+        var remittance: Double?
         var calculations: Double = 0
         var isLoading: Bool = false
     }
@@ -60,10 +60,11 @@ class ExchangeRateCalculatorReactor: Reactor {
         case .changeReceiptCountry(let receiptCountry):
             return Observable.concat(
                 .just(.setLoading(true)),
-                self.exchangeRateService
-                    .fetchExchangeRate(of: receiptCountry)
-                    .map { .setExchangeRate($0) },
+                self.exchangeRateService.fetchExchangeRate(of: receiptCountry).map { .setExchangeRate($0) },
                 .just(.setReceiptCountry(receiptCountry)),
+                .just(.setRemittance(nil)),
+                .just(.setCalculations(0)),
+                .just(.setRecentSearchTime(Date())),
                 .just(.setLoading(false)))
             
         case .inputRemittance(let remittance):

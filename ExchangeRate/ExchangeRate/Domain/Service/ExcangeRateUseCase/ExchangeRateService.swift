@@ -32,8 +32,6 @@ class ExchangeRateService: ExchangeRateServiceType {
     }
     
     func calculatorAmount(remittance: Double, exchangeRate: ExchangeRate) -> Observable<Double> {
-        print(remittance)
-        print(exchangeRate)
         return .just(remittance * exchangeRate.value)
     }
 }
