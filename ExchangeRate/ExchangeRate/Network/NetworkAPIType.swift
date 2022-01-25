@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkAPIType {
-    
+    func performRequest(with query: ReceiptCountry, completion: @escaping (Result<ExchangeRate, NetworkError>) -> Void)
 }

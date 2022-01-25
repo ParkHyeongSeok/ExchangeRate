@@ -19,16 +19,18 @@ class ExchangeRateCalculatorReactor: Reactor {
     
     enum Mutation {
         case setReceiptCountry(ReceiptCountry)
-        case setExchangeRate(Double)
+        case setExchangeRate(ExchangeRate)
         case setRecentSearchTime(Date)
+        case setRemittance(Double?)
         case setCalculations(Double)
         case setLoading(Bool)
     }
     
     struct State {
         var receiptCountry: ReceiptCountry = .korea
-        var exchangeRate: Double = 0
+        var exchangeRate: ExchangeRate = ExchangeRate(0)
         var recentSearchTime: Date = Date()
+        var remittance: Double?
         var calculations: Double = 0
         var isLoading: Bool = false
     }
@@ -42,7 +44,15 @@ class ExchangeRateCalculatorReactor: Reactor {
     }
     
     func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
-        return Observable.merge(mutation)
+        let initialSetting: Observable<Mutation> = Observable.concat(
+            .just(.setLoading(true)),
+            self.exchangeRateService
+                .fetchExchangeRate(of: self.currentState.receiptCountry)
+                .map { .setExchangeRate($0) },
+            .just(.setRecentSearchTime(Date())),
+            .just(.setReceiptCountry(.korea)),
+            .just(.setLoading(false)))
+        return Observable.merge(mutation, initialSetting)
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -50,18 +60,19 @@ class ExchangeRateCalculatorReactor: Reactor {
         case .changeReceiptCountry(let receiptCountry):
             return Observable.concat(
                 .just(.setLoading(true)),
+                self.exchangeRateService.fetchExchangeRate(of: receiptCountry).map { .setExchangeRate($0) },
                 .just(.setReceiptCountry(receiptCountry)),
-                self.exchangeRateService
-                    .fetchExchangeRate(to: self.currentState.receiptCountry)
-                    .map { .setExchangeRate($0) },
+                .just(.setRemittance(nil)),
+                .just(.setCalculations(0)),
                 .just(.setRecentSearchTime(Date())),
                 .just(.setLoading(false)))
             
         case .inputRemittance(let remittance):
             let exchangeRate = self.currentState.exchangeRate
-            return self.exchangeRateService
-                    .calculatorAmount(remittance: remittance, exchangeRate: exchangeRate)
-                    .map { .setCalculations($0) }
+            return Observable.concat([
+                .just(.setRemittance(remittance)),
+                self.exchangeRateService.calculatorAmount(remittance: remittance, exchangeRate: exchangeRate).map { .setCalculations($0) }
+            ])
         }
     }
     
@@ -78,6 +89,8 @@ class ExchangeRateCalculatorReactor: Reactor {
             newState.calculations = calculations
         case .setLoading(let isLoading):
             newState.isLoading = isLoading
+        case .setRemittance(let remittance):
+            newState.remittance = remittance
         }
         return newState
     }
