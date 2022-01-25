@@ -22,14 +22,14 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
     }
     
     // remit
-    private let remitCountryLabel = UILabel().then {
+    private let remittanceCountryLabel = UILabel().then {
         $0.text = "송금국가 : "
         $0.font = UIFont.systemFont(ofSize: 17)
         $0.textAlignment = .center
     }
     
-    private let selectedRemitCountry = UILabel().then {
-        $0.text = "미국(USD)"
+    private let selectedRemittanceCountry = UILabel().then {
+        $0.text = RemittanceCountry.america.rawValue
         $0.font = UIFont.systemFont(ofSize: 17)
         $0.textAlignment = .center
     }
@@ -143,7 +143,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
             reactor.state
                 .map { $0.receiptCountry }
                 .map { $0.currencyUnit })
-            .map { "\($0) \($1) / USD" }
+            .map { "\($0) \($1) / \(RemittanceCountry.america.currencyUnit)" }
             .observe(on: MainScheduler.asyncInstance)
             .bind(to: currentExchangeRate.rx.text)
             .disposed(by: disposeBag)
@@ -206,7 +206,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         
         let verticalLabelStackView = UIStackView(
             arrangedSubviews: [
-                self.remitCountryLabel,
+                self.remittanceCountryLabel,
                 self.receiptCountryLabel,
                 self.exchangeRateLabel,
                 self.searchTimeLabel,
@@ -243,7 +243,7 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         
         let verticalResultStackView = UIStackView(
             arrangedSubviews: [
-                self.selectedRemitCountry,
+                self.selectedRemittanceCountry,
                 self.receiptCountrySelectButton,
                 exchangeRateHorizontalStackView,
                 self.recentSearchTime,

@@ -30,6 +30,15 @@
 		03E5DF39279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */; };
 		03E5DF3B279F4A3500109CB4 /* CurrencyAPIUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */; };
 		03E5DF41279F4F1F00109CB4 /* StubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF40279F4F1F00109CB4 /* StubSession.swift */; };
+		03E5DF43279F514600109CB4 /* SessionTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */; };
+		03E5DF46279F741A00109CB4 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF45279F741A00109CB4 /* RequestParams.swift */; };
+		03E5DF48279F748A00109CB4 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF47279F748900109CB4 /* RouterType.swift */; };
+		03E5DF4B279F754600109CB4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF4A279F754600109CB4 /* NetworkError.swift */; };
+		03E5DF4E279F778800109CB4 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF4D279F778800109CB4 /* Interceptor.swift */; };
+		03E5DF50279F779400109CB4 /* ERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF4F279F779400109CB4 /* ERRouter.swift */; };
+		03E5DF52279F782400109CB4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF51279F782400109CB4 /* SessionManager.swift */; };
+		03E5DF57279F7FA700109CB4 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF56279F7FA700109CB4 /* ExchangeRate.swift */; };
+		03E5DF59279F803200109CB4 /* RemittanceCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF58279F803200109CB4 /* RemittanceCountry.swift */; };
 		8322B15DEF01AE77582A3C53 /* Pods_ExchangeRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D1D1E59F23B6F1B5E33FF /* Pods_ExchangeRateTests.framework */; };
 		B6F8FC3541E702C0E123019E /* Pods_ExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */; };
 		D36C086C2686CEE95B5BC4AE /* Pods_ExchangeRate_ExchangeRateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B0A561299B7F7EADA6FA7 /* Pods_ExchangeRate_ExchangeRateUITests.framework */; };
@@ -80,6 +89,15 @@
 		03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceUnitTests.swift; sourceTree = "<group>"; };
 		03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPIUnitTests.swift; sourceTree = "<group>"; };
 		03E5DF40279F4F1F00109CB4 /* StubSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSession.swift; sourceTree = "<group>"; };
+		03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTypeProtocol.swift; sourceTree = "<group>"; };
+		03E5DF45279F741A00109CB4 /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
+		03E5DF47279F748900109CB4 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		03E5DF4A279F754600109CB4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		03E5DF4D279F778800109CB4 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		03E5DF4F279F779400109CB4 /* ERRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERRouter.swift; sourceTree = "<group>"; };
+		03E5DF51279F782400109CB4 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		03E5DF56279F7FA700109CB4 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		03E5DF58279F803200109CB4 /* RemittanceCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceCountry.swift; sourceTree = "<group>"; };
 		18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194701768A3701F64C87612F /* Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DAE0CBDA1B7098A623CE7A3 /* Pods-ExchangeRateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateTests.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,10 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				03E5DF13279EBF2300109CB4 /* Application API */,
-				03E5DF15279EBF9C00109CB4 /* Network */,
 				03E5DF16279EBFA900109CB4 /* Application */,
+				03E5DF15279EBF9C00109CB4 /* Network */,
 				03E5DF11279EBF0900109CB4 /* Domain */,
-				03E5DF26279EE43500109CB4 /* Model */,
 				03E5DEDF279EB5A800109CB4 /* Assets.xcassets */,
 				03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */,
 				03E5DEE4279EB5A800109CB4 /* Info.plist */,
@@ -160,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				03E5DF35279F498100109CB4 /* TestModel */,
-				03E5DF36279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift */,
-				03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */,
 				03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */,
+				03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */,
+				03E5DF36279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift */,
 			);
 			path = ExchangeRateTests;
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 		03E5DF13279EBF2300109CB4 /* Application API */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF49279F74B600109CB4 /* Error */,
 				03E5DF1A279EDB1D00109CB4 /* Protocol */,
 				03E5DF17279ED0B700109CB4 /* Extension */,
 				03E5DF14279EBF9100109CB4 /* Base */,
@@ -216,6 +234,8 @@
 		03E5DF15279EBF9C00109CB4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF4C279F775900109CB4 /* Session */,
+				03E5DF44279F73EB00109CB4 /* Router */,
 				03E5DF21279EDD6500109CB4 /* NetworkAPIType.swift */,
 				03E5DF1F279EDD5A00109CB4 /* CurrencyAPI.swift */,
 			);
@@ -244,34 +264,38 @@
 		03E5DF1A279EDB1D00109CB4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF42279F514600109CB4 /* SessionTypeProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		03E5DF26279EE43500109CB4 /* Model */ = {
+		03E5DF26279EE43500109CB4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF58279F803200109CB4 /* RemittanceCountry.swift */,
 				03E5DF27279EE44C00109CB4 /* ReceiptCountry.swift */,
+				03E5DF56279F7FA700109CB4 /* ExchangeRate.swift */,
 			);
-			path = Model;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		03E5DF29279EFA8C00109CB4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */,
-				03E5DF2E279EFCB700109CB4 /* ExcangeRateUserCase */,
+				03E5DF26279EE43500109CB4 /* Entity */,
+				03E5DF2E279EFCB700109CB4 /* ExcangeRateUseCase */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		03E5DF2E279EFCB700109CB4 /* ExcangeRateUserCase */ = {
+		03E5DF2E279EFCB700109CB4 /* ExcangeRateUseCase */ = {
 			isa = PBXGroup;
 			children = (
 				03E5DF2C279EFC0100109CB4 /* ExchangeRateServiceType.swift */,
 				03E5DF2A279EFBE600109CB4 /* ExchangeRateService.swift */,
 			);
-			path = ExcangeRateUserCase;
+			path = ExcangeRateUseCase;
 			sourceTree = "<group>";
 		};
 		03E5DF35279F498100109CB4 /* TestModel */ = {
@@ -280,6 +304,33 @@
 				03E5DF40279F4F1F00109CB4 /* StubSession.swift */,
 			);
 			path = TestModel;
+			sourceTree = "<group>";
+		};
+		03E5DF44279F73EB00109CB4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF45279F741A00109CB4 /* RequestParams.swift */,
+				03E5DF47279F748900109CB4 /* RouterType.swift */,
+				03E5DF4F279F779400109CB4 /* ERRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		03E5DF49279F74B600109CB4 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF4A279F754600109CB4 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		03E5DF4C279F775900109CB4 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF4D279F778800109CB4 /* Interceptor.swift */,
+				03E5DF51279F782400109CB4 /* SessionManager.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		14B3487C0A29DE949D70D524 /* Pods */ = {
@@ -565,17 +616,26 @@
 				03E5DF30279EFCD300109CB4 /* ServiceAssembly.swift in Sources */,
 				03E5DF1C279EDC4C00109CB4 /* CalculatorAssembly.swift in Sources */,
 				03E5DF25279EDF0300109CB4 /* AppAssembler.swift in Sources */,
+				03E5DF57279F7FA700109CB4 /* ExchangeRate.swift in Sources */,
+				03E5DF46279F741A00109CB4 /* RequestParams.swift in Sources */,
+				03E5DF59279F803200109CB4 /* RemittanceCountry.swift in Sources */,
 				03E5DF2B279EFBE600109CB4 /* ExchangeRateService.swift in Sources */,
 				03E5DF28279EE44C00109CB4 /* ReceiptCountry.swift in Sources */,
+				03E5DF43279F514600109CB4 /* SessionTypeProtocol.swift in Sources */,
 				03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */,
 				03E5DF2D279EFC0100109CB4 /* ExchangeRateServiceType.swift in Sources */,
+				03E5DF52279F782400109CB4 /* SessionManager.swift in Sources */,
+				03E5DF50279F779400109CB4 /* ERRouter.swift in Sources */,
 				03E5DF34279F0D4000109CB4 /* Double+Extension.swift in Sources */,
+				03E5DF4E279F778800109CB4 /* Interceptor.swift in Sources */,
 				03E5DF0B279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift in Sources */,
 				03E5DF0E279EBB7400109CB4 /* BaseViewController.swift in Sources */,
 				03E5DF22279EDD6500109CB4 /* NetworkAPIType.swift in Sources */,
+				03E5DF48279F748A00109CB4 /* RouterType.swift in Sources */,
 				03E5DF32279F0C9200109CB4 /* Date+Extension.swift in Sources */,
 				03E5DF10279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift in Sources */,
 				03E5DF20279EDD5A00109CB4 /* CurrencyAPI.swift in Sources */,
+				03E5DF4B279F754600109CB4 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.5.0)
   - Nimble (9.2.1)
   - ReactorKit (3.2.0):
     - RxSwift (~> 6.0)
@@ -18,6 +19,7 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Nimble
   - ReactorKit
   - RxCocoa
@@ -29,6 +31,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Nimble
     - ReactorKit
     - RxCocoa
@@ -41,6 +44,7 @@ SPEC REPOS:
     - WeakMapTable
 
 SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 9c55e3ce47807eafa0fac03853597935ddecb1c2
+PODFILE CHECKSUM: ce30cd4341c543360f5b5a3b227d0b06195ed36f
 
 COCOAPODS: 1.11.2

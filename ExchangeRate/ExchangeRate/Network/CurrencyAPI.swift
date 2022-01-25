@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import Alamofire
 
 class CurrencyAPI: NetworkAPIType {
-    let session: URLSession
-    init(session: URLSession = URLSession.shared) {
+    
+    let session: SessionType
+    init(session: SessionType = Session.default) {
         self.session = session
+    }
+    
+    func performRequest(with query: String, completion: @escaping (Result<String, Error>) -> Void) {
+        
     }
 }
