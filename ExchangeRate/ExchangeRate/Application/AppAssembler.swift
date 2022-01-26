@@ -21,3 +21,4 @@ extension AppAssembler {
         return Assembler(assemblies)
     }
 }
+
