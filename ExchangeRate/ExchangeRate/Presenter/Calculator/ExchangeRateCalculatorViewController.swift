@@ -339,7 +339,5 @@ class ExchangeRateCalculatorViewController: BaseViewController, View {
         } else {
             return false
         }
-    }
-    
-    
+    }   
 }

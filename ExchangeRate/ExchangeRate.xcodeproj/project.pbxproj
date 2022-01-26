@@ -10,8 +10,6 @@
 		03E5DED7279EB5A500109CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DED6279EB5A500109CB4 /* AppDelegate.swift */; };
 		03E5DEE0279EB5A800109CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DEDF279EB5A800109CB4 /* Assets.xcassets */; };
 		03E5DEE3279EB5A800109CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */; };
-		03E5DEF8279EB5A900109CB4 /* ExchangeRateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEF7279EB5A900109CB4 /* ExchangeRateUITests.swift */; };
-		03E5DEFA279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DEF9279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift */; };
 		03E5DF0B279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0A279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift */; };
 		03E5DF0E279EBB7400109CB4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0D279EBB7400109CB4 /* BaseViewController.swift */; };
 		03E5DF10279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF0F279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift */; };
@@ -26,10 +24,6 @@
 		03E5DF30279EFCD300109CB4 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */; };
 		03E5DF32279F0C9200109CB4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF31279F0C9200109CB4 /* Date+Extension.swift */; };
 		03E5DF34279F0D4000109CB4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF33279F0D4000109CB4 /* Double+Extension.swift */; };
-		03E5DF37279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF36279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift */; };
-		03E5DF39279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */; };
-		03E5DF3B279F4A3500109CB4 /* CurrencyAPIUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */; };
-		03E5DF41279F4F1F00109CB4 /* StubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF40279F4F1F00109CB4 /* StubSession.swift */; };
 		03E5DF46279F741A00109CB4 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF45279F741A00109CB4 /* RequestParams.swift */; };
 		03E5DF48279F748A00109CB4 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF47279F748900109CB4 /* RouterType.swift */; };
 		03E5DF4B279F754600109CB4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF4A279F754600109CB4 /* NetworkError.swift */; };
@@ -38,27 +32,8 @@
 		03E5DF52279F782400109CB4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF51279F782400109CB4 /* SessionManager.swift */; };
 		03E5DF57279F7FA700109CB4 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF56279F7FA700109CB4 /* ExchangeRate.swift */; };
 		03E5DF59279F803200109CB4 /* RemittanceCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF58279F803200109CB4 /* RemittanceCountry.swift */; };
-		8322B15DEF01AE77582A3C53 /* Pods_ExchangeRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D1D1E59F23B6F1B5E33FF /* Pods_ExchangeRateTests.framework */; };
 		B6F8FC3541E702C0E123019E /* Pods_ExchangeRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB91F064534A3E593C7D37 /* Pods_ExchangeRate.framework */; };
-		D36C086C2686CEE95B5BC4AE /* Pods_ExchangeRate_ExchangeRateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B0A561299B7F7EADA6FA7 /* Pods_ExchangeRate_ExchangeRateUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		03E5DEEA279EB5A900109CB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03E5DECB279EB5A500109CB4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03E5DED2279EB5A500109CB4;
-			remoteInfo = ExchangeRate;
-		};
-		03E5DEF4279EB5A900109CB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03E5DECB279EB5A500109CB4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03E5DED2279EB5A500109CB4;
-			remoteInfo = ExchangeRate;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03E5DED3279EB5A500109CB4 /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,10 +41,6 @@
 		03E5DEDF279EB5A800109CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E5DEE2279EB5A800109CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E5DEE4279EB5A800109CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03E5DEE9279EB5A900109CB4 /* ExchangeRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E5DEF3279EB5A900109CB4 /* ExchangeRateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E5DEF7279EB5A900109CB4 /* ExchangeRateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateUITests.swift; sourceTree = "<group>"; };
-		03E5DEF9279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		03E5DF0A279EBB2900109CB4 /* ExchangeRateCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorViewController.swift; sourceTree = "<group>"; };
 		03E5DF0D279EBB7400109CB4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		03E5DF0F279EBD2B00109CB4 /* ExchangeRateCalculatorReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorReactor.swift; sourceTree = "<group>"; };
@@ -84,10 +55,6 @@
 		03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		03E5DF31279F0C9200109CB4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		03E5DF33279F0D4000109CB4 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		03E5DF36279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorReactorUnitTests.swift; sourceTree = "<group>"; };
-		03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceUnitTests.swift; sourceTree = "<group>"; };
-		03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPIUnitTests.swift; sourceTree = "<group>"; };
-		03E5DF40279F4F1F00109CB4 /* StubSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSession.swift; sourceTree = "<group>"; };
 		03E5DF45279F741A00109CB4 /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		03E5DF47279F748900109CB4 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		03E5DF4A279F754600109CB4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -116,22 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03E5DEE6279EB5A900109CB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8322B15DEF01AE77582A3C53 /* Pods_ExchangeRateTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03E5DEF0279EB5A900109CB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D36C086C2686CEE95B5BC4AE /* Pods_ExchangeRate_ExchangeRateUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				03E5DED5279EB5A500109CB4 /* ExchangeRate */,
-				03E5DEEC279EB5A900109CB4 /* ExchangeRateTests */,
-				03E5DEF6279EB5A900109CB4 /* ExchangeRateUITests */,
 				03E5DED4279EB5A500109CB4 /* Products */,
 				14B3487C0A29DE949D70D524 /* Pods */,
 				5A89C6A8A1AB294141164508 /* Frameworks */,
@@ -151,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				03E5DED3279EB5A500109CB4 /* ExchangeRate.app */,
-				03E5DEE9279EB5A900109CB4 /* ExchangeRateTests.xctest */,
-				03E5DEF3279EB5A900109CB4 /* ExchangeRateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +111,7 @@
 				03E5DF16279EBFA900109CB4 /* Application */,
 				03E5DF15279EBF9C00109CB4 /* Network */,
 				03E5DF11279EBF0900109CB4 /* Domain */,
+				03E5DFC727A15D1700109CB4 /* Presenter */,
 				03E5DEDF279EB5A800109CB4 /* Assets.xcassets */,
 				03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */,
 				03E5DEE4279EB5A800109CB4 /* Info.plist */,
@@ -171,31 +119,11 @@
 			path = ExchangeRate;
 			sourceTree = "<group>";
 		};
-		03E5DEEC279EB5A900109CB4 /* ExchangeRateTests */ = {
-			isa = PBXGroup;
-			children = (
-				03E5DF35279F498100109CB4 /* TestModel */,
-				03E5DF3A279F4A3500109CB4 /* CurrencyAPIUnitTests.swift */,
-				03E5DF38279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift */,
-				03E5DF36279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift */,
-			);
-			path = ExchangeRateTests;
-			sourceTree = "<group>";
-		};
-		03E5DEF6279EB5A900109CB4 /* ExchangeRateUITests */ = {
-			isa = PBXGroup;
-			children = (
-				03E5DEF7279EB5A900109CB4 /* ExchangeRateUITests.swift */,
-				03E5DEF9279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift */,
-			);
-			path = ExchangeRateUITests;
-			sourceTree = "<group>";
-		};
 		03E5DF11279EBF0900109CB4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				03E5DF26279EE43500109CB4 /* Entity */,
 				03E5DF29279EFA8C00109CB4 /* Service */,
-				03E5DF12279EBF1100109CB4 /* Calculator */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -280,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				03E5DF2F279EFCD200109CB4 /* ServiceAssembly.swift */,
-				03E5DF26279EE43500109CB4 /* Entity */,
 				03E5DF2E279EFCB700109CB4 /* ExcangeRateUseCase */,
 			);
 			path = Service;
@@ -293,14 +220,6 @@
 				03E5DF2A279EFBE600109CB4 /* ExchangeRateService.swift */,
 			);
 			path = ExcangeRateUseCase;
-			sourceTree = "<group>";
-		};
-		03E5DF35279F498100109CB4 /* TestModel */ = {
-			isa = PBXGroup;
-			children = (
-				03E5DF40279F4F1F00109CB4 /* StubSession.swift */,
-			);
-			path = TestModel;
 			sourceTree = "<group>";
 		};
 		03E5DF44279F73EB00109CB4 /* Router */ = {
@@ -328,6 +247,14 @@
 				03E5DF51279F782400109CB4 /* SessionManager.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		03E5DFC727A15D1700109CB4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF12279EBF1100109CB4 /* Calculator */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		14B3487C0A29DE949D70D524 /* Pods */ = {
@@ -375,46 +302,6 @@
 			productReference = 03E5DED3279EB5A500109CB4 /* ExchangeRate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03E5DEE8279EB5A900109CB4 /* ExchangeRateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03E5DF00279EB5A900109CB4 /* Build configuration list for PBXNativeTarget "ExchangeRateTests" */;
-			buildPhases = (
-				887CE584E83D2C18E88F866C /* [CP] Check Pods Manifest.lock */,
-				03E5DEE5279EB5A900109CB4 /* Sources */,
-				03E5DEE6279EB5A900109CB4 /* Frameworks */,
-				03E5DEE7279EB5A900109CB4 /* Resources */,
-				B2A17AC0BCAF9E07E1033F92 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03E5DEEB279EB5A900109CB4 /* PBXTargetDependency */,
-			);
-			name = ExchangeRateTests;
-			productName = ExchangeRateTests;
-			productReference = 03E5DEE9279EB5A900109CB4 /* ExchangeRateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		03E5DEF2279EB5A900109CB4 /* ExchangeRateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03E5DF03279EB5A900109CB4 /* Build configuration list for PBXNativeTarget "ExchangeRateUITests" */;
-			buildPhases = (
-				9A0626A14165EFC8B4BC47AD /* [CP] Check Pods Manifest.lock */,
-				03E5DEEF279EB5A900109CB4 /* Sources */,
-				03E5DEF0279EB5A900109CB4 /* Frameworks */,
-				03E5DEF1279EB5A900109CB4 /* Resources */,
-				96F8E932CE30ED8083FA8804 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03E5DEF5279EB5A900109CB4 /* PBXTargetDependency */,
-			);
-			name = ExchangeRateUITests;
-			productName = ExchangeRateUITests;
-			productReference = 03E5DEF3279EB5A900109CB4 /* ExchangeRateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,14 +314,6 @@
 				TargetAttributes = {
 					03E5DED2279EB5A500109CB4 = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					03E5DEE8279EB5A900109CB4 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 03E5DED2279EB5A500109CB4;
-					};
-					03E5DEF2279EB5A900109CB4 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 03E5DED2279EB5A500109CB4;
 					};
 				};
 			};
@@ -452,8 +331,6 @@
 			projectRoot = "";
 			targets = (
 				03E5DED2279EB5A500109CB4 /* ExchangeRate */,
-				03E5DEE8279EB5A900109CB4 /* ExchangeRateTests */,
-				03E5DEF2279EB5A900109CB4 /* ExchangeRateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,20 +342,6 @@
 			files = (
 				03E5DEE3279EB5A800109CB4 /* LaunchScreen.storyboard in Resources */,
 				03E5DEE0279EB5A800109CB4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03E5DEE7279EB5A900109CB4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03E5DEF1279EB5A900109CB4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,28 +370,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		887CE584E83D2C18E88F866C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExchangeRateTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8A84181DBF09701CFE91786A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,62 +385,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExchangeRate/Pods-ExchangeRate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96F8E932CE30ED8083FA8804 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExchangeRate-ExchangeRateUITests/Pods-ExchangeRate-ExchangeRateUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A0626A14165EFC8B4BC47AD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExchangeRate-ExchangeRateUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B2A17AC0BCAF9E07E1033F92 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -635,40 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03E5DEE5279EB5A900109CB4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03E5DF39279F4A1900109CB4 /* ExchangeRateServiceUnitTests.swift in Sources */,
-				03E5DF3B279F4A3500109CB4 /* CurrencyAPIUnitTests.swift in Sources */,
-				03E5DF41279F4F1F00109CB4 /* StubSession.swift in Sources */,
-				03E5DF37279F49CD00109CB4 /* ExchangeRateCalculatorReactorUnitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03E5DEEF279EB5A900109CB4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03E5DEF8279EB5A900109CB4 /* ExchangeRateUITests.swift in Sources */,
-				03E5DEFA279EB5A900109CB4 /* ExchangeRateUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		03E5DEEB279EB5A900109CB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03E5DED2279EB5A500109CB4 /* ExchangeRate */;
-			targetProxy = 03E5DEEA279EB5A900109CB4 /* PBXContainerItemProxy */;
-		};
-		03E5DEF5279EB5A900109CB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03E5DED2279EB5A500109CB4 /* ExchangeRate */;
-			targetProxy = 03E5DEF4279EB5A900109CB4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03E5DEE1279EB5A800109CB4 /* LaunchScreen.storyboard */ = {
@@ -854,86 +606,6 @@
 			};
 			name = Release;
 		};
-		03E5DF01279EB5A900109CB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DAE0CBDA1B7098A623CE7A3 /* Pods-ExchangeRateTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MBAJ2NCPU9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyungseokpark.ExchangeRateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRate.app/ExchangeRate";
-			};
-			name = Debug;
-		};
-		03E5DF02279EB5A900109CB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CB32588E6AF5FF8015A9B75 /* Pods-ExchangeRateTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MBAJ2NCPU9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyungseokpark.ExchangeRateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRate.app/ExchangeRate";
-			};
-			name = Release;
-		};
-		03E5DF04279EB5A900109CB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 194701768A3701F64C87612F /* Pods-ExchangeRate-ExchangeRateUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MBAJ2NCPU9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyungseokpark.ExchangeRateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ExchangeRate;
-			};
-			name = Debug;
-		};
-		03E5DF05279EB5A900109CB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84662145E6F659C893F9B0F7 /* Pods-ExchangeRate-ExchangeRateUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MBAJ2NCPU9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyungseokpark.ExchangeRateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ExchangeRate;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -951,24 +623,6 @@
 			buildConfigurations = (
 				03E5DEFE279EB5A900109CB4 /* Debug */,
 				03E5DEFF279EB5A900109CB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03E5DF00279EB5A900109CB4 /* Build configuration list for PBXNativeTarget "ExchangeRateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03E5DF01279EB5A900109CB4 /* Debug */,
-				03E5DF02279EB5A900109CB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03E5DF03279EB5A900109CB4 /* Build configuration list for PBXNativeTarget "ExchangeRateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03E5DF04279EB5A900109CB4 /* Debug */,
-				03E5DF05279EB5A900109CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
